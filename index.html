@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Insert the code below into the part of your site markup you want -->
+
+    <script src="https://280days.secure.force.com/lightning/lightning.out.js"></script>
+
+    <div id="lightningLocator"></div>
+
+    <script>
+      $Lightning.use(
+        "c:embedPersonalFormInExternalWebsiteApp",
+        function () {
+          $Lightning.createComponent("c:embedPersonalFormInExternalWebsite", {}, "lightningLocator", function (cmp) {});
+        },
+        "https://280days.secure.force.com"
+      );
+    </script>
+
+    <!-- Insert the code above into the part of your site markup you want -->
+  </body>
+</html>
